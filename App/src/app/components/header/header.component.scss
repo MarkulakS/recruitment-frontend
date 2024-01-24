@@ -6,12 +6,24 @@
     background-color: #0b0c10;
     color: #fff;
 
-    .title {
+    .text-box {
+        display: flex;
+        flex-direction: column;
         margin-right: 4rem;
-        font-size: 1.75rem;
-
-        .fw-bold {
-            font-weight: 600;
+        .title {
+            margin: auto;
+            font-size: 1.5rem;
+    
+            .fw-bold {
+                font-weight: 600;
+            }
+        }
+        .name {
+            margin: auto;
+            margin-top: 0;
+            margin-right: 0;
+            font-size: 1.45rem;
+            font-weight: 300;
         }
     }
 

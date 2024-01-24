@@ -1,8 +1,11 @@
 <div class="container">
     <div class="logo-box">
-        <div class="logo"></div>
+        <a class="logo" href="/"></a>
     </div>
-    <p class="title">
-        Zadanie <span class="fw-bold">rekrutacyjne</span>
-    </p>
+    <div class="text-box">
+        <p class="title" [ngStyle]="{'margin-bottom': mbValue}">
+            Zadanie <span class="fw-bold">rekrutacyjne</span>
+        </p>
+        <p class="name" *ngIf="isEnableData">Szymon Markulak</p>
+    </div>
 </div>
