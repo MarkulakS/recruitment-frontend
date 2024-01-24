@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  caret: string = '^';
+  isClicked: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleFrame() {
+    this.caret = (this.caret === '^') ? '⌄' : '^';
+    this.isClicked = !this.isClicked;
   }
 
 }

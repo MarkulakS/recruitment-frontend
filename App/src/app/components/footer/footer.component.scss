@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+    margin: auto;
+    background-color: #15161a;
+    color: #fff;
+    overflow: hidden;
+
+    .css-box {
+        margin-left: 4rem;
+        cursor: pointer;
+        opacity: .2;
+
+        .text {
+            margin: auto;
+            position: relative;
+            padding-left: .5rem;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+            z-index: 1;
+        }
+
+        .text::before {
+            content: '';
+            position: absolute;
+            width: 76%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: transparent;
+            border: 1px solid;
+            border-color: #fff;
+            z-index: -1;
+        }
+    }
+
+    .css-box:hover {
+        opacity: .8;
+
+        .text::before {
+            border-color: #e88301;
+        }
+    }
+
+    .company-name {
+        margin: auto;
+
+        .name {
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 1.2rem;
+                opacity: .2;
+            }
+
+            .line {
+                width: 2.5rem;
+                height: 1px;
+                margin: auto 5px;
+                background-color: rgba(255, 255, 255, .2);
+            }
+        }
+
+    }
+
+    .btn-box {
+        margin-right: 4rem;
+
+        .btn {
+            line-height: 2rem;
+            width: 15rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, .7);
+            background: transparent;
+            border: 1px solid;
+            border-color: rgba(255, 255, 255, .2);
+            border-radius: 2px;
+            cursor: pointer;
+
+            .centered-caret {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1;
+                margin-left: 5px;
+            }
+        }
+
+        .clicked {
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+}
