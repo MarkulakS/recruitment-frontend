@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   constructor(private personalData: PersonalDataService) { }
 
   ngOnInit(): void {
-    this.personalData.currentBoolean.subscribe(
+    this.personalData.currentDataStatus.subscribe(
       value => {
         this.isEnableData = value;
         if(this.isEnableData) {

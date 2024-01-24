@@ -12,8 +12,9 @@ export class FooterComponent implements OnInit  {
   mbValue: string = 'auto';
   isClicked: boolean = false;
   enablePersonalData: boolean = false;
+  resetDataStatus: boolean = true;
 
-  constructor(private personalData: PersonalDataService) { }
+  constructor(private personalDataService: PersonalDataService) { }
 
   ngOnInit(): void {
   }
@@ -31,13 +32,14 @@ export class FooterComponent implements OnInit  {
 
   showData() {
     this.enablePersonalData = true;
-    this.personalData.setBoolean(this.enablePersonalData);
+    this.personalDataService.setDataStatus(this.enablePersonalData);
     this.toggleFrame();
   }
 
   resetData() {
     this.enablePersonalData = false;
-    this.personalData.setBoolean(this.enablePersonalData);
+    this.personalDataService.setDataStatus(this.enablePersonalData);
+    this.personalDataService.setResetStatus(this.resetDataStatus);
     this.toggleFrame();
   }
 

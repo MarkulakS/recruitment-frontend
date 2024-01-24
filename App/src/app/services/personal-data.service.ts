@@ -5,12 +5,21 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class PersonalDataService {
-  private booleanSource = new BehaviorSubject<boolean>(false);
-  currentBoolean = this.booleanSource.asObservable();
+
+  private personalDataSource = new BehaviorSubject<boolean>(false);
+  currentDataStatus = this.personalDataSource.asObservable();
+
+  private resetDataSource = new BehaviorSubject<boolean>(false);
+  currentResetStatus = this.resetDataSource.asObservable();
 
   constructor() { }
 
-  setBoolean(newValue: boolean) {
-    this.booleanSource.next(newValue);
+  setDataStatus(newValue: boolean) {
+    this.personalDataSource.next(newValue);
   }
+
+  setResetStatus(newValue: boolean) {
+    this.resetDataSource.next(newValue);
+  }
+  
 }
