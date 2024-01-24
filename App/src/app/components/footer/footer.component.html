@@ -1,1 +1,23 @@
-<p>footer works!</p>
+<div class="container">
+    <div class="css-box">
+        <p>CSS<br>IS<br>AWESOME</p>
+    </div>
+    <div class="company-name">
+        <div class="name">
+            <div class="line"></div>
+            <p>nabthat</p>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div class="btn-box">
+        <div class="frame" *ngIf="isClicked">
+            <ul>
+                <li><a (click)="resetData()"><div class="arrow-right"></div> Zresetuj ustawienia</a></li>
+                <li><a (click)="showData()"><div class="arrow-right"></div> Pokaż dane osobowe</a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn" (click)="toggleFrame()" [ngClass]="{'clicked': isClicked}">
+            POKAŻ <div class="arrow" [ngStyle]="{'transform': 'rotate(' + rotationAngle + 'deg)', 'margin-bottom': mbValue}"></div>
+        </button>
+    </div>
+</div>

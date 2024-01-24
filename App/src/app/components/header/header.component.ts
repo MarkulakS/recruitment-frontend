@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { PersonalDataService } from 'src/app/services/personal-data.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isEnableData: boolean = false;
+  mbValue: string = 'auto';
+
+  constructor(private personalData: PersonalDataService) { }
 
   ngOnInit(): void {
+    this.personalData.currentBoolean.subscribe(
+      value => {
+        this.isEnableData = value;
+        if(this.isEnableData) {
+          this.mbValue = '0';
+        } else {
+          this.mbValue = 'auto';
+        }
+      }
+    )
   }
-
 }
