@@ -4,7 +4,6 @@
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    overflow: hidden;
     .header {
         display: flex;
         width: 100%;
@@ -16,7 +15,8 @@
         display: flex;
         width: 100%;
         margin: auto;
-        z-index: -999
+        margin-top: 0;
+        z-index: 0;
     }
     .footer {
         display: flex;

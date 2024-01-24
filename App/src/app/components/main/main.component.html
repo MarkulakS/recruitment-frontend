@@ -1,1 +1,37 @@
-<p>main works!</p>
+<div class="container">
+    <div class="header">
+        <p>Nagłówek H1</p>
+    </div>
+    <div class="content-box">
+        <div class="box box-1">
+            <h4>Blok pierwszy</h4>
+            <div class="radios-box">
+                <div class="parent-radio">
+                    <input type="radio" name="radio" value="option-1" id="option-1" checked [(ngModel)]="option">
+                    <label for="option-1">Opcja pierwsza</label>
+                </div>                
+                <div class="parent-radio">
+                    <input type="radio" name="radio" value="option-2" id="option-2" [(ngModel)]="option">
+                    <label for="option-2">Opcja druga</label>  
+                </div>     
+                <div class="parent-radio">
+                    <input type="radio" name="radio" value="option-3" id="option-3" [(ngModel)]="option">
+                    <label for="option-3">Opcja losowa</label>  
+                </div>     
+            </div>
+        </div>
+        <div class="box box-2">
+            <h4>Blok drugi</h4>
+            <div class="btns-box">
+                <button type="button" (click)="changeElement()">Zastąp</button>
+                <button type="button" (click)="addElement()">Doklej</button>
+            </div>
+        </div>
+        <div class="box box-3">
+            <h4>Blok z długą nazwą która sama się przytnie jak wyjdzie poza ramy</h4>
+            <div class="text-box">
+                <p *ngFor="let text of result">{{text}}</p>
+            </div>
+        </div>
+    </div>
+</div>
