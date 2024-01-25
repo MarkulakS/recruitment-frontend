@@ -40,7 +40,6 @@
             animation-iteration-count: 1;
         }
     }
-
     .css-box:hover {
         opacity: .8;
 
@@ -50,16 +49,15 @@
     }
 
     .company-name {
+        display: block;
         margin: auto;
         .name {
             display: flex;
             align-items: center;
-
             p {
                 font-size: 1.2rem;
                 opacity: .1;
             }
-
             .line {
                 width: 2.5rem;
                 height: 1px;
@@ -67,7 +65,6 @@
                 background-color: rgba(255, 255, 255, .1);
             }
         }
-
     }
 
     .btn-box {
@@ -77,7 +74,6 @@
         align-items: center; 
         margin: auto;
         margin-right: 4rem;
-
         .btn {
             line-height: 2rem;
             width: 12rem;
@@ -88,17 +84,15 @@
             border-color: rgba(255, 255, 255, .1);
             border-radius: 2px;
             cursor: pointer;
-
             .arrow {
-                    display: inline-block;
-                    margin: auto;
-                    margin-left: 5px;
-                    width: 5px;
-                    height: 5px;
-                    border-top: 2px solid rgba(255, 255, 255, .6);
-                    border-left: 2px solid rgba(255, 255, 255, .6);
-                }
-
+                display: inline-block;
+                margin: auto;
+                margin-left: 5px;
+                width: 5px;
+                height: 5px;
+                border-top: 2px solid rgba(255, 255, 255, .6);
+                border-left: 2px solid rgba(255, 255, 255, .6);
+            }
         }
         .btn:hover {
             color: #fff;
@@ -108,7 +102,6 @@
                 border-left-color: #fff;
             }
         }
-
         .clicked {
             color: #fff;
             border-color: #fff;
@@ -141,7 +134,7 @@
                     font-weight: 500;
                     list-style: none;
                     color: #000;
-                    a{
+                    a {
                         text-decoration: none;
                         color: #000;
                         cursor: pointer;
@@ -186,3 +179,27 @@
         transform:rotate(180deg);
     }
 }
+
+//breakpoints
+@media (max-width: 767.98px) { 
+    .container {
+        grid-template-columns: 1fr 1fr;
+        height: 6rem;
+        .company-name {
+            display: none;
+        }
+        .css-box {
+            margin-left: 1rem;
+            p {
+                font-size: 1rem;
+            }
+        }
+        .btn-box{
+            margin-right: 1rem;
+            .frame {
+                height: 6rem;
+                margin-top: -6rem;
+            }
+        }
+    }
+ }

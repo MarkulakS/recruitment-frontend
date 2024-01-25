@@ -72,7 +72,7 @@
         }
         .logo {
             height: 47.5px;
-            width: 42px;
+            width: 41px;
             margin-left: -.15rem;
             &::after {
                 background: #e88301;
@@ -80,3 +80,34 @@
         }
     }
 }
+
+//breakpoints
+@media (max-width: 575.98px) { 
+    .container {
+        height: 6rem;
+        .text-box {
+            margin-right: 1rem;
+            .title, .name {
+                font-size: 1rem;
+            }
+        }
+        .logo-box {
+            margin-left: 2rem;
+            .logo {
+                height: 40px;
+                width: 32.5px;
+            }
+        }
+        .logo-box::before {
+            top: 3px;
+            left: -16px;
+            width: 65px;
+            height: 60px;
+        }
+        .logo-box:hover .logo {
+            height: 42.5px;
+            width: 35px;
+            margin-left: -.08rem;
+        }
+    }
+ }
