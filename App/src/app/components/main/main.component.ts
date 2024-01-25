@@ -42,6 +42,7 @@ export class MainComponent implements OnInit {
 
   resetStorage() {
     localStorage.setItem('jsondata', JSON.stringify(this.jsonData));
+    localStorage.removeItem('result');
     this.option = "option-1";
     this.changeElement();
   }

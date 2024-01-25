@@ -36,6 +36,7 @@
 
     .content-box {
         display: flex;
+        flex-wrap: nowrap;
         width: 100%;
         margin: auto 4rem;
 
@@ -119,6 +120,7 @@
 .box-2 .btns-box {
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
     gap: 2rem;
     button {
         line-height: 2rem;
@@ -141,14 +143,82 @@
 }
 
 .box-3 .text-box {
-        font-size: .8rem;
-        font-weight: 300;
-        width: 90%;
-        margin: auto;
+    font-size: .8rem;
+    font-weight: 300;
+    width: 90%;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    p {
         margin-top: 0;
-        margin-bottom: 2rem;
-        text-align: center;
-        p {
-            margin-top: 0;
-        }
+    }
 }
+
+//breakpoints
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .container {
+        .header {
+            margin-bottom: 3rem;
+        }
+        .content-box {
+            flex-wrap: wrap;
+            margin: auto 2rem;
+            .box {
+                width: 40vw;
+            }
+            .box-3 {
+                margin-top: 3rem;
+                width: 60vw;
+            }
+        }
+    }
+ }
+ // Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    .container .content-box {
+        margin: auto 1rem;
+        .box {
+            width: 45vw;
+        }
+        .box-1 .radios-box .parent-radio {
+            margin-left: 0;
+        }
+        .box-2 .btns-box {
+            gap: .5rem;
+        }
+        .box-3 {
+           width: 100%;
+            .text-box {
+               width: 90%;
+            }
+        }
+    }
+}
+
+ // X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .container .content-box {
+        .box-1 {
+            h4 {
+                text-align: left;
+                margin-left: 0;
+            }
+            .radios-box .parent-radio {
+                font-size: .9rem;
+            }
+        }
+        .box-2 {
+            h4 {
+                text-align: right;
+                margin-right: 0;
+            }
+            .btns-box {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+        }
+    }
+ }
